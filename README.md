@@ -36,13 +36,16 @@ A simple web application built with the LAMP stack that allows judges to submit 
 ## Usage
 
 ### Public Access
-- Access the public scoreboard at: `http://your-domain.com/`
+- Access the public scoreboard at: `http://localhost:8000/`
 
 ### Judge Access
-- Judges can log in at: `http://your-domain.com/judge/login.php`
+- Judges can log in at: `http://localhost:8000/judge/login.php`
 - Default credentials:
   - Email: john@example.com
   - Password: password
+#### Judges page
+![image](https://github.com/user-attachments/assets/9d253f94-6718-4f34-b7eb-29172fa75e0a)
+
 
 #### Scoring Process for Judges
 1. After logging in, judges will be directed to their dashboard
@@ -55,10 +58,13 @@ A simple web application built with the LAMP stack that allows judges to submit 
 8. Scores can be edited until the competition is marked as complete by an admin
 
 ### Admin Access
-- Admins can log in at: `http://localhost/admin/login.php`
+- Admins can log in at: `http://localhost:8000/admin/login.php`
 - Default credentials:
   - Username: admin
   - Password: admin123
+    - Admin page
+  ![image](https://github.com/user-attachments/assets/2c662dc8-4d81-46ac-9bbe-591227ee8785)
+
 
 ## Security Notes
 
