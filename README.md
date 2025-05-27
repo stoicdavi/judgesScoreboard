@@ -15,7 +15,7 @@ A simple web application built with the LAMP stack that allows judges to submit 
 
 1. Clone the repository to your web server directory:
    ```
-   git clone https://github.com/yourusername/scoring-app.git
+   git clone https://github.com/stoicdavi/judgesScoreboard.git
    ```
 
 2. Import the database schema:
@@ -44,8 +44,18 @@ A simple web application built with the LAMP stack that allows judges to submit 
   - Email: john@example.com
   - Password: password
 
+#### Scoring Process for Judges
+1. After logging in, judges will be directed to their dashboard
+2. Select the event or competition from the available list
+3. View the list of participants assigned to you for scoring
+4. Click on a participant's name to access the scoring form
+5. Enter scores for each criterion (typically on a scale of 1-10)
+6. Add optional comments to justify your scoring decisions
+7. Submit the scores by clicking the "Submit" button
+8. Scores can be edited until the competition is marked as complete by an admin
+
 ### Admin Access
-- Admins can log in at: `http://your-domain.com/admin/login.php`
+- Admins can log in at: `http://localhost/admin/login.php`
 - Default credentials:
   - Username: admin
   - Password: admin123
@@ -57,7 +67,3 @@ For a production environment, make sure to:
 2. Use HTTPS
 3. Update the database password in `config/db.php`
 4. Consider implementing rate limiting for login attempts
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
