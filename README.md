@@ -11,27 +11,59 @@ A simple web application built with the LAMP stack that allows judges to submit 
 - Detailed statistics and results
 - Data export functionality
 
+## Requirements
+
+### Server Requirements
+- Linux server
+- Apache 2.4+
+- MySQL 5.7+ or MariaDB 10.2+
+- PHP 7.4+ or PHP 8.0+
+
+### PHP Extensions
+- php-mysql
+- php-json
+- php-mbstring
+- php-xml
+- php-curl
+
+
 ## Installation
 
-1. Clone the repository to your web server directory:
-   ```
-   git clone https://github.com/stoicdavi/judgesScoreboard.git
+1. Install required packages (Ubuntu/Debian):
+   ```bash
+   # Update package lists
+   sudo apt update
+   
+   # Install Apache, MySQL, PHP and required extensions
+   sudo apt install apache2 mysql-server php php-mysql php-json php-mbstring php-xml php-curl
+   
+   # Enable Apache mod_rewrite
+   sudo a2enmod rewrite
+   sudo systemctl restart apache2
    ```
 
-2. Import the database schema:
+2. Clone the repository to your web server directory:
+   ```bash
+   git clone https://github.com/stoicdavi/judgesScoreboard.git
+   cd judgesScoreboard
    ```
+
+3. Import the database schema:
+   ```bash
    mysql -u root -p < setup.sql
    ```
 
-3. Update the database configuration in `config/db.php` with your credentials.
+4. Update the database configuration in `config/db.php` with your credentials.
 
-4. Set proper permissions:
+5. Set proper permissions:
+   ```bash
+   sudo chmod -R 755 /path/to/scoring-app
+   sudo chown -R www-data:www-data /path/to/scoring-app
    ```
-   chmod -R 755 /path/to/scoring-app
-   chown -R www-data:www-data /path/to/scoring-app
+6. Starting the application
+   ```bash
+   php -S localhost:8000
    ```
-
-5. Configure your web server to point to the application directory.
 
 ## Usage
 
